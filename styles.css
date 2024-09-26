@@ -205,6 +205,10 @@ footer {
     .hero h2 {
         font-size: 1.25rem;
     }
+
+    .education-cards {
+        margin: 1rem; /* Reduce margin on smaller screens */
+    }
 }
 
 .center {
