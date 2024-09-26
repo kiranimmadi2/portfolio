@@ -1,106 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Kiran Immadi</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .profile-container {
-            position: sticky;
-            top: 20px;
-            float: left;
-            margin-right: 20px;
-            transition: all 0.3s ease;
-            width: 200px; /* Set a fixed width */
-            height: 200px; /* Set a fixed height */
-            overflow: hidden; /* Hide overflow */
-            border-radius: 50%; /* Make it circular */
-        }
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensure the image covers the container */
-            transition: all 0.3s ease;
-        }
-        .about-content {
-            overflow: hidden; /* Clear the float */
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
+/* styles.css */
 
-    <main>
-        <section class="about">
-            <div class="profile-container">
-                <img src="profile.jpg" alt="profile" class="profile-image">
-            </div>
-            <div class="about-content">
-                <h1>About Me</h1>
-                <p>I'm a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Dayananda Sagar University. With a passion for frontend development and AI technologies, I'm constantly exploring new ways to merge these fields.</p>
-                
-                <h2>Education</h2>
-                    <div class="education-cards">
-                        <div class="card">
-                            <h3>Dayananda Sagar University, Bangalore</h3>
-                            <p><strong>CSE (AI-ML) B.Tech</strong><br>2021 - Present</p>
-                            <p><strong>CGPA:</strong> 7.51</p>
-                        </div>
-                        <div class="card">
-                            <h3>Banajawad PU College, Athani, Belgaum</h3>
-                            <p><strong>PUC</strong><br>2019 - 2021</p>
-                            <p><strong>Percentage:</strong> 79.5%</p>
-                        </div>
-                        <div class="card">
-                            <h3>Morarji Desai Residential School, Madhabhavi, Belgaum</h3>
-                            <p><strong>SSLC</strong><br>2014 - 2019</p>
-                            <p><strong>Percentage:</strong> 83.4%</p>
-                        </div>
-                    </div>
+/* Global Styles */
+:root {
+    --primary-color: #007aff;
+    --background-color: #1c1c1e;
+    --text-color: #ffffff;
+    --secondary-background: #2c2c2e;
+    --hover-color: #0056b3;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            </div>
-        </section>
-    </main>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
 
-    <footer>
-    <p>&copy; 2024 Kiran Immadi. All rights reserved.</p>
-</footer>
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
 
-    <script>
-        window.addEventListener('scroll', function() {
-            const profileContainer = document.querySelector('.profile-container');
-            const profileImage = document.querySelector('.profile-image');
-            const scrollPosition = window.scrollY;
+a:hover {
+    color: var(--hover-color);
+}
 
-            // Adjust these values to control the animation
-            const maxScroll = 300;
-            const minSize = 50;
-            const maxSize = 100;
+/* Header and Navigation */
+header {
+    background-color: var(--secondary-background);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-            if (scrollPosition <= maxScroll) {
-                const sizePercentage = maxSize - (scrollPosition / maxScroll) * (maxSize - minSize);
-                profileContainer.style.width = `${sizePercentage * 2}px`;
-                profileContainer.style.height = `${sizePercentage * 2}px`;
-                profileContainer.style.transform = `translateX(-${scrollPosition / 3}px)`;
-            }
-        });
-    </script>
-</body>
-</html>
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+}
+
+/* Education Cards */
+.education-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between cards */
+    max-width: 600px; /* Maximum width for cards */
+    margin: 2rem auto; /* Center the cards */
+}
+
+.card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem; /* Inner spacing */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.card h3 {
+    color: var(--primary-color); /* Primary color for the headings */
+    margin-bottom: 0.5rem; /* Space below the heading */
+}
+
+.card p {
+    color: #333; /* Dark gray text color */
+    margin: 0.5rem 0; /* Space around paragraphs */
+}
+
+/* Home Page */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: var(--hover-color);
+    color: white;
+}
+
+/* About Page */
+.about ul {
+    list-style-type: none;
+    margin-left: 1rem;
+}
+
+/* Skills Page */
+.skills ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skills li {
+    background-color: var(--secondary-background);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* Projects Page */
+.project {
+    background-color: var(--secondary-background);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.project h2 {
+    color: var(--primary-color);
+}
+
+/* Contact Page */
+.contact ul {
+    list-style-type: none;
+}
+
+.contact li {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--secondary-background);
+    margin-top: 2rem;
+    left: 0;
+    bottom: 0;
+    position: fixed; /* Ensures footer is always at the bottom */
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.25rem;
+    }
+
+    .education-cards {
+        margin: 1rem; /* Reduce margin on smaller screens */
+    }
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 50%;
+}
