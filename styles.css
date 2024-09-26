@@ -73,29 +73,29 @@ h1, h2, h3 {
 .education-cards {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Space between cards */
-    max-width: 600px; /* Maximum width for cards */
-    margin: 2rem auto; /* Center the cards */
+    gap: 1.5rem; 
+    max-width: 600px; 
+    margin: 2rem auto; 
 }
 
 .card {
-    background-color: #ffffff; /* White background for cards */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 8px; /* Rounded corners */
-    padding: 1.5rem; /* Inner spacing */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin: 1rem 0; /* Adds margin above and below each card */
-    height: 150px; /* Fixed height for uniformity (optional) */
+    background-color: #ffffff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    padding: 1.5rem; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    margin: 1rem 0; 
+    height: 150px; 
 }
 
 .card h3 {
-    color: #007aff; /* Primary color for the headings */
-    margin-bottom: 0.5rem; /* Space below the heading */
+    color: #007aff; 
+    margin-bottom: 0.5rem; 
 }
 
 .card p {
-    color: #333; /* Dark gray text color */
-    margin: 0.5rem 0; /* Space around paragraphs */
+    color: #333; 
+    margin: 0.5rem 0; 
 }
 
 
