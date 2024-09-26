@@ -70,6 +70,11 @@ h1, h2, h3 {
     margin-bottom: 1rem;
 }
 
+.education-list li {
+    margin-bottom: 1.5rem; /* Adjust the value for desired gap */
+}
+
+
 /* Home Page */
 .hero {
     text-align: center;
