@@ -84,6 +84,8 @@ h1, h2, h3 {
     border-radius: 8px; /* Rounded corners */
     padding: 1.5rem; /* Inner spacing */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 1rem 0; /* Adds margin above and below each card */
+    height: 150px; /* Fixed height for uniformity (optional) */
 }
 
 .card h3 {
