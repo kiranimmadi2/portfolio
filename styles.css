@@ -70,9 +70,32 @@ h1, h2, h3 {
     margin-bottom: 1rem;
 }
 
-.education-list li {
-    margin-bottom: 1.5rem; /* Adjust the value for desired gap */
+.education-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between cards */
+    max-width: 600px; /* Maximum width for cards */
+    margin: 2rem auto; /* Center the cards */
 }
+
+.card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem; /* Inner spacing */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card h3 {
+    color: #007aff; /* Primary color for the headings */
+    margin-bottom: 0.5rem; /* Space below the heading */
+}
+
+.card p {
+    color: #333; /* Dark gray text color */
+    margin: 0.5rem 0; /* Space around paragraphs */
+}
+
 
 
 /* Home Page */
