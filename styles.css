@@ -70,8 +70,7 @@ h1, h2, h3 {
     flex-direction: column;
     gap: 1.5rem;
     max-width: 600px;
-    margin: 2rem 0;
-    align-self: flex-end;
+    margin: 2rem auto;
 }
 
 .card {
@@ -81,7 +80,6 @@ h1, h2, h3 {
     padding: 1.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    align-self: flex-end;
 }
 
 .card:hover {
@@ -196,8 +194,7 @@ footer {
     }
 
     .education-cards {
-        max-width: 100%;
-        margin: 1rem 0;
+        margin: 1rem;
     }
 }
 
