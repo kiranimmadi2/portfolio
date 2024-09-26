@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Kiran Immadi</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .profile-container {
+            position: sticky;
+            top: 20px;
+            float: left;
+            margin-right: 20px;
+            transition: all 0.3s ease;
+            width: 200px; /* Set a fixed width */
+            height: 200px; /* Set a fixed height */
+            overflow: hidden; /* Hide overflow */
+            border-radius: 50%; /* Make it circular */
+        }
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the container */
+            transition: all 0.3s ease;
+        }
+        .about-content {
+            overflow: hidden; /* Clear the float */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,28 +48,52 @@
 
     <main>
         <section class="about">
-            <img src="profile.jpg" alt="profile" class="center" height="25%" width="25%">
-            <h1>About Me</h1>
-            <p>I'm a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Dayananda Sagar University. With a passion for frontend development and AI technologies, I'm constantly exploring new ways to merge these fields.</p>
-            
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <h3>B.Tech in Computer Science Engineering (AI & ML)</h3>
-                    <p>Dayananda Sagar University | 2021 - 2025</p>
-                    <p>CGPA: 7.51</p>
-                </li>
-                <li>
-                    <h3>PUC (PCMB)</h3>
-                    <p>Banajawad PU College | 2019 - 2021</p>
-                    <p>Percentage: 80%</p>
-                </li>
-            </ul>
+            <div class="profile-container">
+                <img src="profile.jpg" alt="profile" class="profile-image">
+            </div>
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p>I'm a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Dayananda Sagar University. With a passion for frontend development and AI technologies, I'm constantly exploring new ways to merge these fields.</p>
+                
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        <h3>B.Tech in Computer Science Engineering (AI & ML)</h3>
+                        <p>Dayananda Sagar University | 2021 - 2025</p>
+                        <p>CGPA: 7.51</p>
+                    </li>
+                    <li>
+                        <h3>PUC (PCMB)</h3>
+                        <p>Banajawad PU College | 2019 - 2021</p>
+                        <p>Percentage: 79.5%</p>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
 
     <footer>
     <p>&copy; 2024 Kiran Immadi. All rights reserved.</p>
 </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const profileContainer = document.querySelector('.profile-container');
+            const profileImage = document.querySelector('.profile-image');
+            const scrollPosition = window.scrollY;
+
+            // Adjust these values to control the animation
+            const maxScroll = 300;
+            const minSize = 50;
+            const maxSize = 100;
+
+            if (scrollPosition <= maxScroll) {
+                const sizePercentage = maxSize - (scrollPosition / maxScroll) * (maxSize - minSize);
+                profileContainer.style.width = `${sizePercentage * 2}px`;
+                profileContainer.style.height = `${sizePercentage * 2}px`;
+                profileContainer.style.transform = `translateX(-${scrollPosition / 3}px)`;
+            }
+        });
+    </script>
 </body>
 </html>
