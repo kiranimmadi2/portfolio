@@ -1,2 +1,1 @@
-Portfolio Link
-https://kiranimmadi2.github.io/profile/
+Portfolio Link : https://kiranimmadi2.github.io/portfolio/
