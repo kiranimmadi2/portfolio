@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Kiran Immadi</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-details {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-details li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+        .contact-details li img {
+            width: 30px;
+            height: 30px;
+        }
+        .contact-details li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,11 +47,25 @@
     <main>
         <section class="contact">
             <h1>Contact Me</h1>
-            <ul>
-                <li>Email: <a href="mailto:kiranimmadi2@gmail.com">kiranimmadi2@gmail.com</a></li>
-                <li>Phone: +919916398527</li>
-                <li>GitHub: <a href="https://github.com/kiranimmadi2" target="_blank">github.com/kiranimmadi2</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/kiran-immadi" target="_blank">linkedin.com/in/kiran-immadi</a></li>
+            <ul class="contact-details">
+                <li>
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" alt="Gmail">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kiranimmadi2@gmail.com" target="_blank">kiranimmadi2@gmail.com</a>
+                </li>
+                
+                
+                <li>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+                    <a href="https://wa.me/919916398527" target="_blank">+91 99163 98527</a>
+                </li>
+                <li>
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+                    <a href="https://github.com/kiranimmadi2" target="_blank">github.com/kiranimmadi2</a>
+                </li>
+                <li>
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                    <a href="https://www.linkedin.com/in/kiran-immadi" target="_blank">linkedin.com/in/kiran-immadi</a>
+                </li>
             </ul>
         </section>
     </main>
