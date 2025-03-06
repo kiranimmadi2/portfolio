@@ -12,19 +12,34 @@
             float: left;
             margin-right: 20px;
             transition: all 0.3s ease;
-            width: 200px; 
-            height: 200px; 
-            overflow: hidden; 
-            border-radius: 50%; 
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
         }
         .profile-image {
             width: 100%;
             height: 100%;
-            object-fit: cover; 
-            transition: all 0.3s ease;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .profile-image:hover {
+            transform: scale(1.1);
         }
         .about-content {
-            overflow: hidden; 
+            overflow: hidden;
+        }
+        .education-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .education-item {
+            margin-bottom: 20px;
+            background-color: var(--secondary-background);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -53,19 +68,21 @@
             </div>
             <div class="about-content">
                 <h1>About Me</h1>
-                <p>I'm a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Dayananda Sagar University. With a passion for frontend development and AI technologies, I'm constantly exploring new ways to merge these fields.</p>
+                <p>B.Tech student specializing in AI and ML within Computer Science. Experienced in Flutter-based mobile app
+                    development, with hands-on work in AI, machine learning, and data analysis. Completed projects that highlight
+                    my technical skills, teamwork, and the ability to find effective solutions. Interested in contributing to a team and driving impactful results. </p>
                 
                 <h2>Education</h2>
-                <ul>
-                    <li>
+                <ul class="education">
+                    <li class="education-item">
                         <h3>B.Tech in Computer Science Engineering (AI & ML)</h3>
-                        <p>Dayananda Sagar University | 2021 - 2025</p>
-                        <p>CGPA: 7.51</p>
+                        <p><strong>Dayananda Sagar University</strong> | 2021 - 2025</p>
+                        <p><strong>CGPA:</strong> 7.59</p>
                     </li>
-                    <li>
+                    <li class="education-item">
                         <h3>PUC (PCMB)</h3>
                         <p>Banajawad PU College | 2019 - 2021</p>
-                        <p>Percentage: 79.5%</p>
+                        <p><strong>Percentage:</strong> 80%</p>
                     </li>
                 </ul>
             </div>
@@ -73,16 +90,14 @@
     </main>
 
     <footer>
-    <p>&copy; 2024 Kiran Immadi. All rights reserved.</p>
-</footer>
+        <p>&copy; 2024 Kiran Immadi. All rights reserved.</p>
+    </footer>
 
     <script>
         window.addEventListener('scroll', function() {
             const profileContainer = document.querySelector('.profile-container');
-            const profileImage = document.querySelector('.profile-image');
             const scrollPosition = window.scrollY;
 
-            // Adjust these values to control the animation
             const maxScroll = 300;
             const minSize = 50;
             const maxSize = 100;
