@@ -12,5 +12,3 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.classList.remove("active");
     }));
 });
-
-// Remove the smooth scrolling function as it's causing issues with navigation
