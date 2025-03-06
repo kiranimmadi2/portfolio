@@ -5,6 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiran Immadi - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .hero h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+        .cta-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            background-color: var(--primary-color);
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        .social-icons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .social-icons img {
+            width: 45px;
+            height: 45px;
+            transition: transform 0.3s ease;
+        }
+        .social-icons img:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,14 +69,26 @@
     <main>
         <section class="hero">
             <h1>Kiran Immadi</h1>
-            <h2>AI/ML & Frontend Developer </h2>
-            <p>Computer Science Engineering (Artificial Intelligence and Machine Learning)<br> student at Dayananda Sagar University</p>
+            <h2>AI/ML & Frontend Developer</h2>
+            <p>Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Dayananda Sagar University.</p>
             <a href="resume.pdf" class="cta-button">Download CV</a>
+
+            <div class="social-icons">
+                <a href="https://github.com/kiranimmadi2" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/kiran-immadi/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+               
+            </div>
         </section>
     </main>
 
     <footer>
-        <p> 2024 &copy; Kiran Immadi. All rights reserved.</p>
+        <p>&copy; 2024 Kiran Immadi. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
